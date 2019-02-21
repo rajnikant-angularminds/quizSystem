@@ -1,0 +1,56 @@
+<div class="container">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			{{index}}]  Questions
+			<div class="ExamInfo">
+          {{today | date:'fullDate'}}
+			</div>
+		</div>
+		 <form [formGroup]="QuizForm">
+       <div class="panel-body">
+            Right:+{{marks}}
+         <div class="time">
+          <countdown [config]="config">$!m!:$!s!</countdown>
+          </div>
+      <textarea class="form-control" rows="5" *ngIf="GetData"> 
+		                           
+         {{GetData.question}}
+      
+        </textarea> 
+      
+        <!-- <countdown [config]="">$!m!:$!s!</countdown> -->
+        <!-- <countdown ng-if="config" countdown="config" >{{config}} </countdown> -->
+        
+       <div class="form-group">
+        
+        
+           <div *ngFor="let opt of myoptions;let i=index;">
+           
+            
+                   <input type="radio"  name="options" id="option1" value="{{opt}}" (change)="radioSelected($event)"  required>
+                
+                  {{opt}}
+          
+              </div>  
+                </div>
+               
+            </div>
+            <div *ngIf="readioCheck ">
+                <span class="text-danger">Select Option</span> 
+             </div>
+            <div class="panel-footer">
+                <div class="yourCssClass" *ngIf="!this.endExam" (click)="this.endExam = false">
+                    <button class="btn  btn-sm next" (click)="NextData()" [disabled]="endExam">Next</button>  
+                  </div>
+                  <div class="no_0f_Ques">
+                    Question {{index}} of {{len}}
+                </div>
+                <div class="yourCssClass" *ngIf="this.endExam" (click)="this.endExam = false">
+                     <button class="btn  btn-sm next" (click)="EndQuiz()" [disabled]="!endExam">Submit</button>   
+                    
+                </div>
+               
+            </div>
+          </form>
+	</div>
+</div>

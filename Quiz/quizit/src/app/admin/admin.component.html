@@ -1,0 +1,72 @@
+<div class="body">
+  <!-- <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header navbar-left"> 
+              <img src="/assets/images.jpeg" id="logo" />
+        
+            </div>
+          <ul class="nav navbar-nav navbar-left">
+                <li><a href="/demo"><span class="glyphicon glyphicon-plus">AddQuiz</span></a></li>
+                  </ul>
+             
+           
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/dashboard"><span class="glyphicon glyphicon-user" >Dashboard</span></a></li>
+        </ul>
+       
+        <ul class="nav navbar-nav navbar-right">
+            <li><button type="submit" (click)="logout()" id="btn" class="btn btn-info glyphicon glyphicon-log-out" >logOut</button></li>         </ul>
+        </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <ul class="navbar-nav navbar-left">
+          <li class="nav-item active">
+              <img src="/assets/images.jpeg" id="logo" />
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/dashboard"><span class="glyphicon glyphicon-home" >Home</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/demo"><span class="glyphicon glyphicon-plus" >AddQuiz</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/dashboard"><span class="glyphicon glyphicon-user" >Dashboard</span></a>
+          </li>
+        
+        </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+          <li><button type="submit" (click)="logout()" id="btn" class="btn btn-info glyphicon glyphicon-log-out" >logOut</button></li>         
+        </ul>
+      </div>
+      </nav>
+   <div id="wrapper" class="panel panel-primary " style="max-width:500px;margin-left:auto;margin-right:auto;"> 
+       <div class="panel-heading">List Of Quiz</div>
+          <div class="list">
+              <table class="table"> 
+                  <thead>
+                      <tr>
+                        <th>SrNo.</th>
+                        <th>Time</th>
+                        <th>Quiz</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    </table>
+             <div *ngFor="let topic of getAllData; let i=index;">
+                  <div *ngIf="topic && geTime[i]">
+                      <table class="table">
+                          <tbody>
+                             <tr> <td>{{i+1}}</td><td>{{geTime[i]}}</td>
+                              <td ><a href="/quiz/{{topic.topic}}/{{geTime[i]}}" class="links"> {{topic.topic}}</a></td>
+                      <td><a href="/delete/{{topic._id}}" ><span class="glyphicon glyphicon-trash text-danger"></span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                  </div>  
+              </div>
+          </div>
+      </div>
+    
+    </div>

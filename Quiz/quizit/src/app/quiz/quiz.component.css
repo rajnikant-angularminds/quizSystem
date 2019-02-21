@@ -1,0 +1,35 @@
+button {
+    font-size: 18px;
+    padding: 12px 28px;
+    background-color: #008CBA;
+    margin-left:100px;
+}
+button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .time{
+      float: right;
+      font:  15px Arial;
+  text-decoration: none;
+    
+  color: #43a047;
+  padding: 3px 6px 3px 6px;
+  border-top: 1px solid #43a047;
+  border-right: 1px solid #43a047;
+  border-bottom: 1px solid #43a047;
+  border-left: 1px solid #43a047;
+  } 
+  .yourCssClass
+  { 
+      margin-left: 350px;
+  }
+  .no_0f_Ques
+{
+    align-content: center;
+    
+}
+.ExamInfo
+{
+    float: right;
+}

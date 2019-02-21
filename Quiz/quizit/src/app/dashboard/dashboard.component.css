@@ -1,0 +1,93 @@
+
+
+.body{
+
+  background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.5)),to(rgba(0, 0, 0, 0.4))),url(/assets/pesk.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.4)),url(/assets/pesk.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    background-attachment: fixed;
+
+}
+
+li a span{
+  font-size: 14px;
+ 
+}li{
+  list-style-type: none;
+  font-size: 20px;
+}
+a{
+  margin-top: 10px;
+  margin-left: 0px;
+}
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+label{
+  font-size: 26px;
+}
+.button {
+  background-color: rgb(85, 186, 226);  
+  border-radius: 5px;
+  color: white;
+  padding: 12px 18px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.button:focus,
+.button:hover {
+  background-color: rgb(71, 179, 221);
+  color: White;
+  
+}
+.links:hover{
+   color: rgb(247, 55, 48);
+ 
+}
+.content {
+  display: none;
+  margin: 1em 0;
+}
+
+.content.active,
+.no-js .content {
+
+  display: block;
+ }
+ /*.navbar
+{
+
+  margin-bottom: 0%;
+} */
+td{
+  width:100px;
+ 
+  }
+    
+  th{
+    width:100px;
+    }
+  table{
+    border: none;
+  }
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  border: 0 !important
+}
+#logo {
+  float: left;
+  border-radius: 50%;
+  width: 60px;
+}
+.panel{
+  margin-top: 80px;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+}
+

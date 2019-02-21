@@ -1,0 +1,67 @@
+     
+     <div class="body">
+  <!-- <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header navbar-left"> 
+              <img src="/assets/images.jpeg" id="logo" />
+            </div>
+            
+            <ul class="navbar-nav  mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/dashboard"><span class="glyphicon glyphicon-home" >Home</span></a></li>
+               <li class="nav-item"><a class="nav-link" href="/admin"><span class="glyphicon glyphicon-user" >Admin</span></a></li>
+              </ul>
+       
+        <ul class="nav navbar-nav navbar-right">
+            <li><button type="submit" (click)="logout()" id="btn" class="btn btn-info glyphicon glyphicon-log-out" >logOut</button></li>         </ul>
+        </div>
+      </nav> -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+          <ul class="navbar-nav navbar-left">
+            <li class="nav-item active">
+                <img src="/assets/images.jpeg" id="logo" />
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard"><span class="glyphicon glyphicon-home" >Dashboard</span></a>
+            </li>
+            <div *ngIf="checkUser">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin"><span class="glyphicon glyphicon-user" >Admin</span></a>
+            </li>
+          </div>
+          </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><button type="submit" (click)="logout()" id="btn" class="btn btn-info glyphicon glyphicon-log-out" >logOut</button></li>         
+          </ul> 
+        </div>
+        </nav>
+  
+      <div id="wrapper" class="panel panel-primary " > 
+         <div class="panel-heading">List Of Quiz</div>
+                <div class="list">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                              <th>SrNo.</th>
+                              <th>Time</th>
+                              <th>Quiz</th>
+                            </tr>
+                          </thead>
+                          </table>
+                    <div *ngFor="let topic of mytopics; let i=index;">
+                        <div *ngIf="topic && geTime[i]">
+                            <table class="table">
+                                <tbody>
+                                   <tr> <td>{{i+1}}</td><td>{{geTime[i]}}</td>
+                                    <td><li><a href="/quiz/{{topic}}/{{geTime[i]}}" class="links">{{topic}}</a></li></td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                
+            </div>
+         </div>
+        </div>
+ 
